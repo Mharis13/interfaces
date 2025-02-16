@@ -1,0 +1,36 @@
+<!-- empleados.component.html -->
+<div class="container">
+    <h1>Listado de Empleados</h1>
+    
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Nombre:</label>
+        <input type="text" [(ngModel)]="nuevoEmpleado.nombre" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label>Apellidos:</label>
+        <input type="text" [(ngModel)]="nuevoEmpleado.apellidos" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label>Cargo:</label>
+        <input type="text" [(ngModel)]="nuevoEmpleado.cargo" class="form-control">
+      </div>
+      
+      <div class="form-group">
+        <label>Salario:</label>
+        <input type="number" [(ngModel)]="nuevoEmpleado.salario" class="form-control">
+      </div>
+    </div>
+  
+    <button (click)="agregarEmpleado()" class="btn-agregar">Agregar empleado</button>
+  
+    <div class="empleados-list">
+      <ng-container *ngFor="let empleado of empleados; let i = index">
+        <div class="empleado-item">
+          {{i + 1}}:{{empleado.nombre}} {{empleado.apellidos}} {{empleado.cargo}} {{empleado.salario}}
+        </div>
+      </ng-container>
+    </div>
+  </div>
