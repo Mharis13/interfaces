@@ -1,0 +1,22 @@
+<div class="container">
+  <h2 class="title">Empleados de la empresa</h2>
+
+  <p><strong>Nombre del empleado:</strong> {{ empleado.nombre }}</p>
+  <p><strong>Apellido del empleado:</strong> {{ empleado.apellido }}</p>
+  <p><strong>Edad del empleado:</strong> {{ empleado.edad }}</p>
+
+  <label><strong>Dirección del empleado:</strong></label>
+  <input [(ngModel)]="empleado.direccion" placeholder="Introduce la dirección">
+
+  <label><strong>Empresa del empleado:</strong></label>
+  <input [(ngModel)]="empleado.empresa" placeholder="Introduce la empresa">
+
+  <label><strong>Nacionalidad del empleado:</strong></label>
+  <input [(ngModel)]="empleado.nacionalidad" placeholder="Introduce la nacionalidad">
+
+  <p>No hay nadie registrado</p>
+
+  <label><strong>Registrado:</strong></label>
+  <input type="radio" name="registro" [(ngModel)]="empleado.registrado" [value]="true"> Sí
+  <input type="radio" name="registro" [(ngModel)]="empleado.registrado" [value]="false"> No
+</div>
